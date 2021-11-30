@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body style="   display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #E5E5E5;">
+    <div class="registration">
+        <div class="page__header">
+            <H4>Регистрация</H4>
+        </div>
+
+        <div class="google-login-button registration__google-login-button">
+            <div class="google-login-button__icon">
+                <img src="./img/google-icon.svg" />
+            </div>
+
+            <div class="google-login-button__title">
+                <p>Войти через Google</p>
+            </div>
+        </div>
+
+        <div class="email-login">
+            <a href="#" class="email-login__title link">Или через электронную почту</a>
+        </div>
+
+        <div class="registration__input">
+            <div class="input">
+                <div class="input__title">
+                    <p>ФИО</p>
+                </div>
+
+                <div class="input__input">
+                    <input type="text" id="registration__fullname">
+                </div>
+            </div>
+        </div>
+        
+        <div class="input">
+            <div class="input__title">
+                <p>Email</p>
+            </div>
+
+            <div class="input__input">
+                <input type="text" id="registration__email">
+            </div>
+        </div>
+        
+        <div class="input">
+            <div class="input__title">
+                <p>Пароль</p>
+            </div>
+
+            <div class="input__input password">
+                <input type="text" id="registration__password">
+            </div>
+        </div>
+        
+        <div class="input">
+            <div class="input__title">
+                <p>Подтверждение пароля</p>
+            </div>
+
+            <div class="input__input password">
+                <input type="text" id="registration__password-confirmation">
+            </div>
+        </div>
+
+        <div class="checkbox" style="margin-top: 22px; margin-bottom: 25px;">
+            <input class="checkbox__checkbox" type="checkbox">
+            <p class="checkbox__title wrap-text">Принимаю условия&nbsp;<a href="#" class="confirmation-link link">Политики конфиденциальности</a></p>
+        </div>
+
+        <div class="button authorization__button">
+            <p class="button__title">Зарегистрироваться</p>
+        </div>
+    </div>
+</body>
+
+</html>

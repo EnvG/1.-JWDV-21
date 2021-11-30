@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="authorization">
+        <div class="authorization__illustration">
+            <img src="./img/Illustration.png">
+        </div>
+
+        <div class="authorization__main">
+            <div class="page__header">
+                <H4>Авторизация</H4>
+            </div>
+
+            <div class="google-login-button authorization__google-login-button">
+                <div class="google-login-button__icon">
+                    <img src="./img/google-icon.svg" />
+                </div>
+
+                <div class="google-login-button__title">
+                    <p>Войти через Google</p>
+                </div>
+            </div>
+
+            <div class="email-login">
+                <a href="#" class="email-login__title link">Или через электронную почту</a>
+            </div>
+
+            <div class="authorization__input">
+                <div class="input">
+                    <div class="input__title">
+                        <p>Email</p>
+                    </div>
+
+                    <div class="input__input">
+                        <input type="text" id="authorization__email">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__title">
+                        <p>Пароль</p>
+                    </div>
+
+                    <div class="input__input password authorization__password">
+                        <input type="password" id="authorization__password">
+                    </div>
+                </div>
+
+                <div class="authorization__input-options">
+                    <div class="checkbox">
+                        <input class="checkbox__checkbox" type="checkbox">
+                        <p class="checkbox__title">Запомнить меня</p>
+                    </div>
+
+                    <a href="./repairPassword.html" class="authorization__forget-password link">Забыли пароль?</a>
+                </div>
+
+                <div class="button authorization__button">
+                    <p class="button__title">Войти</p>
+                </div>
+            </div>
+
+            <div class="authorization__footer">
+                <p class="authorization__footer-text">Ещё нет аккаунта? <a href="./registration.html" class="authorization__footer-link link">Зарегистрироваться</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

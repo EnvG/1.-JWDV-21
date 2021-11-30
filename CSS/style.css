@@ -1,0 +1,565 @@
+:root {
+    --background: #304FFD;
+    --heading: #3F434A;
+    --border: #E8E9EB;
+    --body-dark: #595F69;
+    --body-light: #8A9099;
+    --accent: #304FFD;
+    --button-hover: #2941c5;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Подключение шрифтов */
+
+/* stem */
+@font-face {
+    font-family: 'stem';
+    src: url('../fonts/stem/Stem-Regular.ttf');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'stem';
+    src: url('../fonts/stem/Stem-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'stem';
+    src: url('../fonts/stem/Stem-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'stem';
+    src: url('../fonts/stem/Stem-Bold.ttf');
+    font-weight: bold;
+}
+
+.repair__footer, .change__footer {
+    position: absolute;
+    bottom: 27px;
+}
+
+.repair-wrapper .input, .change-container .input {
+    margin-bottom: 25px ;
+}
+
+.repair-container__title, .change-container__title {
+    font-size: 28px;
+    font-family: 'stem';
+    font-weight: 500;
+    margin-bottom: 47px;
+}
+
+.repair-container__img > img {
+    width: 80px;
+    height: 112px;
+}
+
+.change-container__img > img {
+    width: 80px;
+    height: 112px;
+}
+
+.repair-container__img, .change-container__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    background-color: #F8F8F8;
+    margin-top: 80px;
+    margin-bottom: 37px;
+}
+
+.repair-wrapper, .change-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    height: 100vh;
+}
+
+.repair-container, .change-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 600px;
+    height: 672px;
+    border-radius: 20px;
+}
+
+.change-container {
+    height: 859px;
+}
+
+.repair-img {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'stem';
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body:has(.registration) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.authorization {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background);
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.authorization__main,
+.registration {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+.page__header {
+    margin-bottom: 44px;
+    margin-top: 40px;
+}
+
+.page__header>h4 {
+    font-weight: bold;
+    color: var(--heading);
+    font-size: 28px;
+}
+
+.google-login-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding-left: 14px;
+    background-color: #FFFFFF;
+    transition: all 0.25s ease-in-out;
+}
+
+.google-login-button:hover {
+    background-color: #ececec;
+}
+
+.google-login-button__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-login-button__title {
+    width: 100%;
+}
+
+.google-login-button__title>p {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--body-dark);
+    text-align: center;
+    user-select: none;
+}
+
+.email-login__title {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--body-light);
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.email-login__title::before {
+    position: absolute;
+    content: '';
+    background-color: var(--border);
+    top: 50%;
+    left: calc(-50px - 12px);
+}
+
+.email-login__title::after {
+    position: absolute;
+    content: '';
+    background-color: var(--border);
+    top: 50%;
+    right: calc(-50px - 12px);
+}
+
+.authorization__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__title>p {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--body-light);
+    margin-bottom: 9px;
+}
+
+.input__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.input__input>input {
+    border: 0px;
+    width: 90%;
+    background-color: transparent;
+    color: var(--heading);
+    font-size: 14px;
+    padding: 16px 11px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.password {
+    position: relative;
+}
+
+.password::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 7.5px;
+    background: url('../img/hide.svg');
+    top: 50%;
+    right: 16px;
+    cursor: pointer;
+}
+
+.authorization__input-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.checkbox__checkbox {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.checkbox__checkbox+p::before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    transition: all 0.4s ease-in-out;
+    background-image: url('../img/checkbox.svg');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.checkbox__checkbox:checked+p::before {
+    background-color: var(--background);
+    border-color: transparent;
+}
+
+.checkbox__checkbox:hover+p::before {
+    transform: translateX(2px);
+    border-color: var(--border);
+}
+
+.checkbox__title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--body-dark);
+    user-select: none;
+    min-width: 140px;
+}
+
+.authorization__forget-password {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    background-color: var(--accent);
+    border-radius: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.01, 1.03);
+}
+
+.button__title {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.authorization__footer {
+    position: absolute;
+    bottom: 27px;
+}
+
+.authorization__footer-text {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--body-light);
+}
+
+.authorization__footer-link {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+/* Мобильная версия */
+
+@media (min-width: 375px) {
+    .authorization__illustration {
+        display: none;
+    }
+
+    .authorization__main {
+        width: 316px;
+        height: 688px;
+    }
+
+    .google-login-button {
+        width: 252px;
+        height: 40px;
+    }
+
+    .authorization__google-login-button,
+    .registration__google-login-button {
+        margin-bottom: 32px;
+    }
+
+    .email-login {
+        margin-bottom: 32px;
+    }
+
+    .email-login__title::before {
+        width: 15px;
+        height: 1px;
+    }
+
+    .email-login__title::after {
+        width: 15px;
+        height: 1px;
+    }
+
+    .authorization__input {
+        width: 252px;
+    }
+
+    .input {
+        width: 252px;
+    }
+
+    .authorization__password {
+        margin-bottom: 22px;
+    }
+
+    .checkbox {
+        width: 170px;
+    }
+
+    .button {
+        width: 252px;
+    }
+
+    /*  */
+
+    .registration {
+        width: 316px;
+        height: 856px;
+    }
+}
+
+/* Версия для планшетов */
+
+@media (min-width: 1024px) {
+    .authorization__illustration {
+        display: block;
+    }
+
+    .authorization__illustration>img {
+        width: 408.25px;
+        height: 415px;
+    }
+
+    .authorization__main {
+        width: 430px;
+        height: 688px;
+    }
+
+    .authorization__google-login-button,
+    .registration__google-login-button {
+        margin-bottom: 33px;
+    }
+
+    .email-login {
+        margin-bottom: 31px;
+    }
+
+    .email-login__title::before {
+        width: 50px;
+        height: 1px;
+    }
+
+    .email-login__title::after {
+        width: 50px;
+        height: 1px;
+    }
+
+    .authorization__input {
+        width: 320px;
+    }
+
+    .input {
+        width: 320px;
+    }
+
+    .authorization__password {
+        margin-bottom: 22px;
+    }
+
+    .checkbox {
+        width: 170px;
+    }
+
+    .button {
+        width: 320px;
+    }
+
+    /*  */
+
+    .registration {
+        width: 430px;
+        height: 878px;
+    }
+}
+
+/* Верисия для больших экранов */
+
+@media (min-width: 1920px) {
+    .authorization__illustration {
+        display: block;
+    }
+
+    .authorization__illustration>img {
+        width: 579.76px;
+        height: 589.34px;
+    }
+
+    .authorization__main {
+        width: 600px;
+        height: 884px;
+    }
+
+    .email-login {
+        margin-bottom: 31px;
+    }
+
+    .email-login__title::before {
+        width: 90px;
+        height: 1px;
+    }
+
+    .email-login__title::after {
+        width: 90px;
+        height: 1px;
+    }
+
+    .authorization__input {
+        width: 400px;
+    }
+
+    .input {
+        width: 400px;
+    }
+
+    .authorization__password {
+        margin-bottom: 22px;
+    }
+
+    .checkbox {
+        width: 170px;
+    }
+
+    .button {
+        width: 400px;
+    }
+
+    /*  */
+
+    .registration {
+        width: 600px;
+        height: 878px;
+    }
+}
