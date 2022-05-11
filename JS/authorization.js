@@ -2,9 +2,11 @@ $(document).ready(function () {
   const API_URL = "https://localhost:7283";
 
   $("#auth-button").click(() => {
+    // Введённые данные
     let email = $("#email").val();
     let password = $("#password").val();
 
+    // Запрос авторизации к API
     $.ajax({
       type: "GET",
       url: `${API_URL}/user/auth?email=${email}&password=${password}`,
@@ -17,6 +19,7 @@ $(document).ready(function () {
       },
     });
 
+    // Очистка поля ввода пароля
     $("#password").val("");
   });
 });
