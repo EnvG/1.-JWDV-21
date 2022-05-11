@@ -4,14 +4,21 @@ $(document).ready(function () {
     $('#auth-button').click(() => {
         let email = $('#email').val();
         let password = $('#password').val();
-
-        console.log(email, password);
  
-        $.get(`${API_URL}/WeatherForecast`, null,
-            function (data, textStatus, jqXHR) {
-                console.log(data);
-            },
-            "dataType"
-        );
+        $.ajax({
+            type: "GET",
+            url: `${API_URL}/user/auth?email=${email}&password=${password}`,
+            success: function (response) {
+                if(response)
+                {
+                    alert('Авторизация прошла успешно');
+                }
+                else {
+                    alert ('Неверный email или пароль');
+                }
+            }
+        });
+
+        $('#password').val('');
     })
 });
