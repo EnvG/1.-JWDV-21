@@ -6,7 +6,7 @@ $(document).ready(function () {
         let password = $('#password').val();
 
         console.log(email, password);
-
+ 
         $.get(`${API_URL}/WeatherForecast`, null,
             function (data, textStatus, jqXHR) {
                 console.log(data);
