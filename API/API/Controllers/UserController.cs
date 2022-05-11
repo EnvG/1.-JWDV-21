@@ -50,5 +50,35 @@ namespace API.Controllers
                 return false;
             }
         }
+
+        [HttpGet("repair-password")]
+        public bool RepairPassword(string email)
+        {
+            User? user = this.context.Users.Where(u => u.Email == email).FirstOrDefault();
+
+            return user != null;
+        }
+
+        [HttpGet("change-password")]
+        public bool? ChangePassword (string email, string password)
+        {
+            User? user = this.context.Users.Where(u => u.Email == email).FirstOrDefault();
+
+            if (user.Password == password)
+            {
+                return null;
+            }
+
+            if (user != null)
+            {
+                user.Password = password;
+                this.context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
