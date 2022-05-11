@@ -8,7 +8,7 @@ namespace API
         public int UserId { get; set; }
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
-        public byte[] Photo { get; set; } = null!;
+        public byte[]? Photo { get; set; }
 
         public virtual Person Person { get; set; } = null!;
     }

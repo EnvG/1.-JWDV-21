@@ -27,7 +27,7 @@ namespace API.Controllers
         {
             try
             {
-                int id = (this.context.Users.Max(u => u.UserId) == null ? 0 : this.context.Users.Max(u => u.UserId)) + 1;
+                int id = (this.context.Users.ToList().Max(u => u.UserId) == null ? 0 : this.context.Users.Max(u => u.UserId)) + 1;
                 User user = new User()
                 {
                     UserId = id,
